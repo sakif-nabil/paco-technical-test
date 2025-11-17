@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr" layout:decorate="~{decorators/master}"
+      xmlns:layout="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter un Vol</title>
+    <link rel="stylesheet" type="text/css" th:href="@{css/flightform.css}">
+</head>
+<body>
+
+<header>
+    <h1>Ajouter un Nouveau Vol</h1>
+</header>
+
+<section>
+
+    <form th:action="@{/add}" method="post">
+
+        <label>Aéroport de départ</label>
+        <input type="text" name="origin" required>
+
+        <label>Aéroport d'arrivée</label>
+        <input type="text" name="destination" required>
+
+        <label>Prix</label>
+        <input type="number" step="0.01" name="price" required>
+
+        <label>Date de départ</label>
+        <input type="datetime-local" name="departureDate" required>
+
+        <label>Date d'arrivée</label>
+        <input type="datetime-local" name="arrivalDate" required>
+
+        <label>URL Image</label>
+        <input type="text" name="image">
+
+        <div>
+            <button type="submit">Ajouter le Vol</button>
+
+        </div>
+
+    </form>
+
+    <a href="/"><button >Annuler</button></a>
+
+</section>
+
+</body>
+</html>

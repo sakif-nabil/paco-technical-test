@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr" layout:decorate="~{decorators/master}"
+      xmlns:layout="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche de Vols</title>
+    <link rel="stylesheet" type="text/css" th:href="@{css/flightdetails.css}">
+</head>
+<body>
+<header>
+    <h1>Details du Vol</h1>
+</header>
+
+<section>
+
+    <div class="flight-details">
+        <p><strong>Départ :</strong> <span th:text="${flight.origin.name}"></span></p>
+        <p><strong>Arrivée :</strong> <span th:text="${flight.destination.name}"></span></p>
+        <p><strong>Date départ :</strong>
+            <span th:text="${#temporals.format(flight.departure, 'dd/MM/yyyy HH:mm')}"></span>
+        </p>
+        <p><strong>Date arrivée :</strong>
+            <span th:text="${#temporals.format(flight.arrival, 'dd/MM/yyyy HH:mm')}"></span>
+        </p>
+        <p><strong>Prix :</strong> <span th:text="${flight.price}"></span> €</p>
+        <p><img th:src="${flight.image}" width="250"></p>
+    </div>
+
+    <a href="/"><button > << retour</button></a>
+</section>
+
+<footer>
+    <p>&copy; 2023 Recherche de Vols. Tous droits réservés.</p>
+</footer>
+</body>
+</html>

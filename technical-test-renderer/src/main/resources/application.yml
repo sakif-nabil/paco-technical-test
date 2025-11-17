@@ -1,7 +1,11 @@
 spring:
   application:
     name: technical-test-renderer
-
+  thymeleaf:
+    cache: false
+  devtools:
+    restart:
+      enabled: true
 server:
   port: 8087
 
@@ -13,3 +17,7 @@ webclient:
       base-path: /
       flight-path: /flight
 
+logging:
+  level:
+    org.springframework.web: DEBUG
+    org.springframework.web.servlet.mvc.method.annotation: DEBUG
