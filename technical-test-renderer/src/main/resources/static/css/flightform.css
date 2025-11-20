@@ -36,7 +36,7 @@ input {
     border-radius: 5px;
 }
 
-button,a {
+button {
     margin-top: 20px;
     width: 100%;
     padding: 12px;
@@ -45,9 +45,27 @@ button,a {
     font-size: 18px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+
 }
 
-button:hover {
+a {
+    display: inline-block;
+    margin-top: 20px;
+    width: 98%;
+    padding: 12px;
+    background-color: #f03110;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+button:hover{
     background-color: #2779b5;
+}
+a:hover {
+    background-color: #c6280d;
 }

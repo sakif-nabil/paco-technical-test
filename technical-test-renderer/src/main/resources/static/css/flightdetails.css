@@ -32,9 +32,9 @@ header {
     box-shadow: 0 1px 5px rgba(0,0,0,0.1);
 }
 
-button {
+ a {
+    display: inline-block;
     margin: 20px;
-    width: 10%;
     padding: 12px;
     background-color: #3498db;;
     color: white;
@@ -42,6 +42,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 footer {
