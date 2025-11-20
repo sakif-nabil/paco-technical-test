@@ -60,7 +60,7 @@
                         <th th:text="${#temporals.format(flight.departure, 'dd/MM/yyyy HH:mm')}"></th>
                         <th th:text="${#temporals.format(flight.arrival, 'dd/MM/yyyy HH:mm')}"></th>
                         <th th:text="${flight.price}"></th>
-                        <th ><img th:src="${flight.image}" alt="image" width="150"></th>
+                        <th ><img th:src="${flight.image}" alt="image" width="150" loading="lazy"></th>
 
                     </tr>
                 </table>
